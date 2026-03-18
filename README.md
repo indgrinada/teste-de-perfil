@@ -1,5 +1,5 @@
 # Teste de perfil
-## Programa, em python, para computar as respostas de um teste comportamental.
+## Programa para computar respostas de um teste comportamental
 O arquivo "teste de perfil comportamental.py" é um programa em python que computa as respostas dadas para uma avaliação que o meu amigo, rafael, escreveu.
 
 ## Objetivo
