@@ -22,4 +22,5 @@ O Menu conta com as seguintes opções:
 ## Observações
 - Nessa situação específica, optei por receber apenas as respostas como entrada, devido ao cenário particular em que a avaliação se enconta, mas pretendo, futuramente, implementar a funcionalidade "Quiz", que facilitaria outras avaliações.
 - O programa é bastante simples, e calcula apenas a incidência de determinadas respostas sobre o total de opções computadas. Com o tempo pretendo melhorar o código, dificultando a sua quebra.
+- Importante ressaltar que o programa comete um erro GRAVÍSSIMO de estatística, fazendo com que as freqências relativas nem sempre resultem em 100% (hehe~~). Mas o importante é que dá pra ter uma ideia do perfil de cada respondente e já ajuda, de certa forma~~ (vou tentar ajeitar isso, desculpa TwT)
 
