@@ -3,6 +3,15 @@
 # Início - define as variáveis necessárias
 menu = "T"
 perfis = {}
+mensagem = """
+
+Digite:
+
+T para realizar outro teste
+V para visualizar os resultados
+S para salvar o relatório
+E para excluir registros
+F para finalizar \n\n"""
     
 
 # Teste - recebe as respostas, computa e apresenta o resultado
@@ -28,6 +37,8 @@ def teste(perfis):
                 opcoes[char] += 1
 
     total = opcoes["A"] + opcoes["B"] + opcoes["C"] + opcoes["D"]
+    if total == 0: total = 1  # Evita divisão por zero
+
     perfis[nome] = {
         "Líder": opcoes["A"] / total * 100,
         "Pesquisador": opcoes["B"] / total * 100,
@@ -50,15 +61,42 @@ def visual(perfis):
             print(f"{face}: {porcentagem:.2f}%")
 
 
+# Salvamento - gera um txt dos resultados gerais
+def salva(perfis):
+    with open("relatorio_perfis.txt", "w") as arquivo:
+        arquivo.write(f"RESULTADOS GERAIS\n")
+        for nome in perfis.keys():
+            arquivo.write(f"\n{nome}:\n")
+            for face, porcentagem in perfis[nome].items():
+                arquivo.write(f"{face}: {porcentagem:.2f}%\n")
+    print("\nRelatório salvo como \"relatorio_perfis.txt\"!")
+
+
+# Exclusão - exclui o registro do respondente indicado, caso necessário
+def exclui(perfis):
+    nome = input("Digite o nome do respondente a ser excluído: ").upper()
+    if nome in perfis:
+        del perfis[nome]
+        print(f"\nRegistro de {nome} excluído com sucesso!")
+    else:
+        print(f"\nRegistro de {nome} não encontrado.")
+
+
 # Menu - permite, ao respondente, escolher entre realizar outro teste, visualizar os resultados ou sair do programa
-while menu != "S":
+while menu != "F":
     if menu == "T":
         teste(perfis)
-        menu = input("\n\nDigite \"T\" para realizar outro teste, \"V\" para visualizar os resultados, ou \"S\" para sair do programa: ").upper()
+        menu = input(f"{mensagem}T/V/S/E/F: ").upper()
     elif menu == "V":
         visual(perfis)
-        menu = input("\n\nDigite \"T\" para realizar outro teste, \"V\" para visualizar os resultados, ou \"S\" para sair do programa: ").upper()
+        menu = input(f"{mensagem}T/V/S/E/F: ").upper()
+    elif menu == "S":
+        salva(perfis)
+        menu = input(f"{mensagem}T/V/S/E/F: ").upper()
+    elif menu == "E":
+        exclui(perfis)
+        menu = input(f"{mensagem}T/V/S/E/F: ").upper()
     else:
-        menu = input("Opção inválida. Digite \"T\" para realizar outro teste, \"V\" para visualizar os resultados, ou \"S\" para sair do programa: ").upper()
+        menu = input(f"Opção inválida. \n{mensagem}T/V/S/E/F: ").upper()
 
 print("\n\nFim do programa.")
