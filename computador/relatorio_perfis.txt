@@ -1,37 +1,37 @@
 RESULTADOS GERAIS
 
 VINICIUS:
-Líder: 10.64%
+LÃ­der: 10.64%
 Pesquisador: 53.19%
 Executor: 25.53%
 Revisor: 10.64%
 
 VITOR:
-Líder: 20.00%
+LÃ­der: 20.00%
 Pesquisador: 22.86%
 Executor: 48.57%
 Revisor: 8.57%
 
 YURI:
-Líder: 15.62%
+LÃ­der: 15.62%
 Pesquisador: 12.50%
 Executor: 15.62%
 Revisor: 56.25%
 
 RANDAL:
-Líder: 7.14%
+LÃ­der: 7.14%
 Pesquisador: 21.43%
 Executor: 59.52%
 Revisor: 11.90%
 
 GIOVANI:
-Líder: 13.33%
+LÃ­der: 13.33%
 Pesquisador: 20.00%
 Executor: 56.67%
 Revisor: 10.00%
 
 INGRID:
-Líder: 25.00%
+LÃ­der: 25.00%
 Pesquisador: 9.38%
 Executor: 21.88%
 Revisor: 43.75%
